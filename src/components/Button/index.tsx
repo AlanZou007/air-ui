@@ -2,7 +2,6 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 import './index.less'
-import {MouseEventHandler} from "react";
 
 export interface IButton {
     type?: string
@@ -14,7 +13,7 @@ export interface IButton {
     disabled?: boolean,
     className?: string,
     style?: React.CSSProperties,
-    onClick?: MouseEventHandler<HTMLAnchorElement>
+    onClick?: () => void
 }
 
 class Button extends React.Component<IButton, any> {
